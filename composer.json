@@ -1,0 +1,45 @@
+{
+    "name": "meema/flysystem-meema",
+    "description": "Flysystem adapter for the Meema API",
+    "keywords": [
+        "meema",
+        "cion",
+        "flysystem",
+        "flysystem-meema"
+    ],
+    "homepage": "https://github.com/meemaio/flysystem-meema",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Chris Breuer",
+            "email": "chris@cion.agency",
+            "homepage": "https://cion.agency",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.0 || ^8.0",
+        "league/flysystem-aws-s3-v3": "~1.0"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^4.3",
+        "phpunit/phpunit": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Meema\\Flysystem\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Meema\\Flysystem\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
