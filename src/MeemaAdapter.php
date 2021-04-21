@@ -2,9 +2,6 @@
 
 namespace Meema\Flysystem;
 
-use GuzzleHttp\Client as GuzzleClient;
-use GuzzleHttp\Psr7;
-use GuzzleHttp\Psr7\Request;
 use League\Flysystem\Adapter\AbstractAdapter;
 use League\Flysystem\Config;
 use Meema\MeemaApi\Client;
@@ -32,7 +29,7 @@ class MeemaAdapter extends AbstractAdapter
      */
     public function write($path, $contents, Config $config)
     {
-        return $this->upload($path);
+        return $this->client->media()->upload($path);
     }
 
     /**
@@ -46,7 +43,7 @@ class MeemaAdapter extends AbstractAdapter
      */
     public function writeStream($path, $resource, Config $config)
     {
-        return $this->upload($path);
+        return $this->client->media()->upload($path);
     }
 
     /**
@@ -150,7 +147,7 @@ class MeemaAdapter extends AbstractAdapter
      */
     public function setVisibility($path, $visibility)
     {
-        return $this->client->request('POST', 'aws/set-visibility', compact('path', 'visibility'));
+        return $this->client->media()->setVisibility($path, $visibility);
     }
 
     /**
@@ -162,9 +159,7 @@ class MeemaAdapter extends AbstractAdapter
      */
     public function has($path)
     {
-        $data = $this->client->request('POST', 'aws/has', compact('path'));
-
-        return $data['exists'] ?? false;
+       return $this->client->media()->has($path);
     }
 
     /**
@@ -213,7 +208,7 @@ class MeemaAdapter extends AbstractAdapter
      */
     public function getMetadata($path)
     {
-        return $this->client->request('POST', 'aws/metadata', compact('path'));
+        return $this->client->media()->getMetadata($path);
     }
 
     /**
@@ -262,68 +257,5 @@ class MeemaAdapter extends AbstractAdapter
     public function getVisibility($path)
     {
         return $this->getMetadata($path);
-    }
-
-    /**
-     * Upload a media file.
-     *
-     * @param string $path
-     *
-     * @return array
-     */
-    protected function upload($path)
-    {
-        $file = fopen($path, 'r');
-        $stream = Psr7\stream_for($file);
-
-        $fileName = basename($path);
-        $mimeType = mime_content_type($file);
-
-        $vaporParams = ['content_type' => $mimeType];
-
-        $signedUrl = $this->client->request('POST', 'vapor/signed-storage-url', $vaporParams);
-
-        if (is_array($signedUrl) && $signedUrl['url']) {
-            $headers = $signedUrl['headers'];
-            unset($headers['Host']);
-
-            $this->uploadToS3($signedUrl['url'], $headers, $fileName, $stream);
-
-            $uploadData = ['key' => $signedUrl['key'], 'file_name' => $fileName];
-
-            $response = $this->client->request('POST', 'upload', $uploadData);
-        }
-
-        return $response;
-    }
-
-    /**
-     * Upload the file stream to s3.
-     *
-     * @param string          $signedUrl
-     * @param array           $headers
-     * @param string          $fileName
-     * @param GuzzleHttp\Psr7 $stream
-     *
-     * @return void
-     */
-    protected function uploadToS3($signedUrl, $headers, $fileName, $stream)
-    {
-        $client = new GuzzleClient();
-        $request = new Request(
-            'PUT',
-            $signedUrl,
-            ['headers' => json_encode($headers)],
-            new Psr7\MultipartStream(
-                [
-                    [
-                        'name'     => $fileName,
-                        'contents' => $stream,
-                    ],
-                ]
-            )
-        );
-
-        $client->send($request);
     }
 }
