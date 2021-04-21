@@ -159,7 +159,7 @@ class MeemaAdapter extends AbstractAdapter
      */
     public function has($path)
     {
-       return $this->client->media()->has($path);
+        return $this->client->media()->has($path);
     }
 
     /**
