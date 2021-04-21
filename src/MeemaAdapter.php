@@ -7,6 +7,7 @@ use GuzzleHttp\Psr7;
 use GuzzleHttp\Psr7\Request;
 use League\Flysystem\Adapter\AbstractAdapter;
 use League\Flysystem\Config;
+use Meema\MeemaApi\Client;
 
 class MeemaAdapter extends AbstractAdapter
 {
@@ -14,10 +15,10 @@ class MeemaAdapter extends AbstractAdapter
      * @var \Meema\Flysystem\Client
      */
     protected $client;
-
+ 
     public function __construct()
     {
-        $this->client = new Client('pk_live|2|1|kDLnNyPvkdlA8sXJky7SJePO1IdabMzncYxypyC2');
+        $this->client = new Client('pk_live|2|1|0dtrJyDb4FHoIIeKm4r0J9R9OX9WZyKlRpEamnEz', ['base_url' => 'http://meema-api.test/api/']);
     }
 
     /**
