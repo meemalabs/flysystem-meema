@@ -19,7 +19,8 @@
     ],
     "require": {
         "php": "^7.0 || ^8.0",
-        "league/flysystem-aws-s3-v3": "~2.0"
+        "guzzlehttp/guzzle": "^7.3",
+        "league/flysystem": "^1.0.70"
     },
     "require-dev": {
         "symfony/var-dumper": "^5.2",
