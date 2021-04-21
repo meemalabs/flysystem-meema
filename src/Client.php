@@ -39,9 +39,9 @@ class Client
         ])
         ->getBody()
         ->getContents();
-        
+
         $body = json_decode($content, true);
-            
+
         if ($body && array_key_exists('data', $body)) {
             return $body['data'];
         }

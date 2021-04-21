@@ -10,21 +10,22 @@ use League\Flysystem\Config;
 
 class MeemaAdapter extends AbstractAdapter
 {
-    /** 
+    /**
      * @var \Meema\Flysystem\Client
-    */
+     */
     protected $client;
 
     public function __construct()
     {
         $this->client = new Client('pk_live|2|1|kDLnNyPvkdlA8sXJky7SJePO1IdabMzncYxypyC2');
     }
+
     /**
      * Write a new file.
      *
      * @param string $path
      * @param string $contents
-     * @param Config $config Config object
+     * @param Config $config   Config object
      *
      * @return false|array false on failure file meta data on success
      */
@@ -181,7 +182,7 @@ class MeemaAdapter extends AbstractAdapter
      * List contents of a directory.
      *
      * @param string $directory
-     * @param bool $recursive
+     * @param bool   $recursive
      *
      * @return array
      */
@@ -298,9 +299,9 @@ class MeemaAdapter extends AbstractAdapter
     /**
      * Upload the file stream to s3.
      *
-     * @param string $signedUrl
-     * @param array $headers
-     * @param string $fileName
+     * @param string          $signedUrl
+     * @param array           $headers
+     * @param string          $fileName
      * @param GuzzleHttp\Psr7 $stream
      *
      * @return void
@@ -315,7 +316,7 @@ class MeemaAdapter extends AbstractAdapter
             new Psr7\MultipartStream(
                 [
                     [
-                        'name' => $fileName,
+                        'name'     => $fileName,
                         'contents' => $stream,
                     ],
                 ]
