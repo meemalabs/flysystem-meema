@@ -15,7 +15,7 @@ class MeemaAdapter extends AbstractAdapter
      * @var \Meema\Flysystem\Client
      */
     protected $client;
- 
+
     public function __construct()
     {
         $this->client = new Client('pk_live|2|1|0dtrJyDb4FHoIIeKm4r0J9R9OX9WZyKlRpEamnEz', ['base_url' => 'http://meema-api.test/api/']);
