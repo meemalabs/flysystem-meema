@@ -15,7 +15,7 @@ class MeemaAdapter extends AbstractAdapter
 
     public function __construct()
     {
-        $this->client = new Client('pk_live|2|1|0dtrJyDb4FHoIIeKm4r0J9R9OX9WZyKlRpEamnEz', ['base_url' => 'http://meema-api.test/api/']);
+        $this->client = new Client(env('MEEMA_API_KEY'));
     }
 
     /**
@@ -29,7 +29,7 @@ class MeemaAdapter extends AbstractAdapter
      */
     public function write($path, $contents, Config $config)
     {
-        return $this->client->media()->upload($path);
+        return $this->client->storage()->upload($path);
     }
 
     /**
@@ -43,7 +43,7 @@ class MeemaAdapter extends AbstractAdapter
      */
     public function writeStream($path, $resource, Config $config)
     {
-        return $this->client->media()->upload($path);
+        return $this->client->storage()->upload($path);
     }
 
     /**
@@ -57,21 +57,21 @@ class MeemaAdapter extends AbstractAdapter
      */
     public function update($path, $contents, Config $config)
     {
-        return [];
+        return $this->client->storage()->upload($path);
     }
 
     /**
      * Update a file using a stream.
      *
-     * @param string   $path
+     * @param string $path
      * @param resource $resource
-     * @param Config   $config   Config object
+     * @param Config $config Config object
      *
      * @return array|false false on failure file meta data on success
      */
     public function updateStream($path, $resource, Config $config)
     {
-        return [];
+        return $this->client->storage()->upload($path);
     }
 
     /**
@@ -84,7 +84,7 @@ class MeemaAdapter extends AbstractAdapter
      */
     public function rename($path, $newpath)
     {
-        return [];
+        return $this->client->storage()->rename($path, $newpath);
     }
 
     /**
@@ -97,7 +97,7 @@ class MeemaAdapter extends AbstractAdapter
      */
     public function copy($path, $newpath)
     {
-        return [];
+        return $this->client->storage()->copy($path, $newpath);
     }
 
     /**
@@ -109,7 +109,7 @@ class MeemaAdapter extends AbstractAdapter
      */
     public function delete($path)
     {
-        return [];
+        return $this->client->storage()->delete($path);
     }
 
     /**
@@ -121,7 +121,7 @@ class MeemaAdapter extends AbstractAdapter
      */
     public function deleteDir($dirname)
     {
-        return [];
+        return $this->client->storage()->deleteDirectory($dirname);
     }
 
     /**
@@ -134,7 +134,7 @@ class MeemaAdapter extends AbstractAdapter
      */
     public function createDir($dirname, Config $config)
     {
-        return [];
+        return $this->client->storage()->makeDirectory($dirname);
     }
 
     /**
@@ -147,7 +147,7 @@ class MeemaAdapter extends AbstractAdapter
      */
     public function setVisibility($path, $visibility)
     {
-        return $this->client->media()->setVisibility($path, $visibility);
+        return $this->client->storage()->setVisibility($path, $visibility);
     }
 
     /**
@@ -159,7 +159,7 @@ class MeemaAdapter extends AbstractAdapter
      */
     public function has($path)
     {
-        return $this->client->media()->has($path);
+        return $this->client->storage()->has($path);
     }
 
     /**
@@ -171,7 +171,7 @@ class MeemaAdapter extends AbstractAdapter
      */
     public function read($path)
     {
-        return false;
+        return $this->getMetadata($path);
     }
 
     /**
@@ -184,7 +184,7 @@ class MeemaAdapter extends AbstractAdapter
      */
     public function listContents($directory = '', $recursive = false)
     {
-        return [];
+        return $this->client->storage()->listContents($directory, $recursive);
     }
 
     /**
@@ -196,7 +196,7 @@ class MeemaAdapter extends AbstractAdapter
      */
     public function readStream($path)
     {
-        return [];
+        return $this->getMetadata($path);
     }
 
     /**
@@ -208,7 +208,7 @@ class MeemaAdapter extends AbstractAdapter
      */
     public function getMetadata($path)
     {
-        return $this->client->media()->getMetadata($path);
+        return $this->client->storage()->getMetadata($path);
     }
 
     /**
