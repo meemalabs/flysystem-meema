@@ -4,7 +4,7 @@ namespace Meema\Flysystem;
 
 use League\Flysystem\Adapter\AbstractAdapter;
 use League\Flysystem\Config;
-use Meema\MeemaApi\Client;
+use Meema\MeemaClient\Client;
 
 class MeemaAdapter extends AbstractAdapter
 {
@@ -13,9 +13,9 @@ class MeemaAdapter extends AbstractAdapter
      */
     protected $client;
 
-    public function __construct($accessKey)
+    public function __construct(Client $client)
     {
-        $this->client = new Client($accessKey);
+        $this->client = $client;
     }
 
     /**
