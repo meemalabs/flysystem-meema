@@ -729,12 +729,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/meemalabs/meema-client-php.git",
-                "reference": "f4a5766ab9194e17e5524a269c7d3188a8385441"
+                "reference": "1ccc4b8e9a225addde4ef089c873ad5bc470dbc9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/meemalabs/meema-client-php/zipball/f4a5766ab9194e17e5524a269c7d3188a8385441",
-                "reference": "f4a5766ab9194e17e5524a269c7d3188a8385441",
+                "url": "https://api.github.com/repos/meemalabs/meema-client-php/zipball/1ccc4b8e9a225addde4ef089c873ad5bc470dbc9",
+                "reference": "1ccc4b8e9a225addde4ef089c873ad5bc470dbc9",
                 "shasum": ""
             },
             "require": {
@@ -753,7 +753,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Meema\\MeemaApi\\": "src"
+                    "Meema\\MeemaClient\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -779,7 +779,7 @@
                 "video conversions",
                 "video converter"
             ],
-            "time": "2021-04-22T05:21:14+00:00"
+            "time": "2021-04-22T23:27:08+00:00"
         },
         {
             "name": "nesbot/carbon",
