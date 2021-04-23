@@ -13,9 +13,9 @@ class MeemaAdapter extends AbstractAdapter
      */
     protected $client;
 
-    public function __construct()
+    public function __construct($accessKey)
     {
-        $this->client = new Client(env('MEEMA_API_KEY'));
+        $this->client = new Client($accessKey);
     }
 
     /**
