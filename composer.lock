@@ -311,16 +311,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.8.1",
+            "version": "1.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "35ea11d335fd638b5882ff1725228b3d35496ab1"
+                "reference": "dc960a912984efb74d0a90222870c72c87f10c91"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/35ea11d335fd638b5882ff1725228b3d35496ab1",
-                "reference": "35ea11d335fd638b5882ff1725228b3d35496ab1",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/dc960a912984efb74d0a90222870c72c87f10c91",
+                "reference": "dc960a912984efb74d0a90222870c72c87f10c91",
                 "shasum": ""
             },
             "require": {
@@ -378,7 +378,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2021-03-21T16:25:00+00:00"
+            "time": "2021-04-26T09:17:50+00:00"
         },
         {
             "name": "illuminate/collections",
@@ -729,12 +729,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/meemalabs/meema-client-php.git",
-                "reference": "1ccc4b8e9a225addde4ef089c873ad5bc470dbc9"
+                "reference": "120a0475c7cca6d9f0f3518fb213bb6c19a22029"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/meemalabs/meema-client-php/zipball/1ccc4b8e9a225addde4ef089c873ad5bc470dbc9",
-                "reference": "1ccc4b8e9a225addde4ef089c873ad5bc470dbc9",
+                "url": "https://api.github.com/repos/meemalabs/meema-client-php/zipball/120a0475c7cca6d9f0f3518fb213bb6c19a22029",
+                "reference": "120a0475c7cca6d9f0f3518fb213bb6c19a22029",
                 "shasum": ""
             },
             "require": {
@@ -779,7 +779,7 @@
                 "video conversions",
                 "video converter"
             ],
-            "time": "2021-04-22T23:27:08+00:00"
+            "time": "2021-04-27T01:02:52+00:00"
         },
         {
             "name": "nesbot/carbon",
