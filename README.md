@@ -25,7 +25,7 @@ $adapter = new MeemaAdapter($client);
 
 $filesystem = new Filesystem($adapter);
 ```
-Extending the storage, you have to put this in your service provider.
+For extending the storage, you have to put this in your service provider.
 
 ```php
 use League\Flysystem\Filesystem;
