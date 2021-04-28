@@ -25,6 +25,41 @@ $adapter = new MeemaAdapter($client);
 
 $filesystem = new Filesystem($adapter);
 ```
+Extending the storage, you have to put this in your service provider.
+
+```php
+use League\Flysystem\Filesystem;
+use Meema\Client as MeemaClient;
+use Meema\FlysystemMeema\MeemaAdapter;
+
+/**
+ * Bootstrap any application services.
+ *
+ * @return void
+ */
+public function boot()
+{
+    Storage::extend('meema', function ($app, $config) {
+        $client = new MeemaClient(
+            $config['api_secret']
+        );
+
+        return new Filesystem(new MeemaAdapter($client));
+    });
+}
+```
+After extending the storage you will have to put the `meema` driver in your `config/filesystems.php`
+
+Read more about custom filesystems [here](https://laravel.com/docs/8.x/filesystem#custom-filesystems)
+```php
+'disks' => [
+    ...
+    'meema' => [
+        'driver' => 'meema',
+        'api_seceret' => env('MEEMA_API_SECRET'),
+    ],
+]
+```
 
 ## Changelog
 
@@ -33,7 +68,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 ## Testing
 
 ``` bash
-composer test
+./vendor/bin/pest
 ```
 
 ## Contributing
