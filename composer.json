@@ -21,11 +21,13 @@
         "php": "^7.0 || ^8.0",
         "guzzlehttp/guzzle": "^7.3",
         "league/flysystem": "^1.0.70",
+        "vlucas/phpdotenv": "^5.3",
         "meema/meema-client-php": "dev-main"
     },
     "require-dev": {
-        "symfony/var-dumper": "^5.2",
-        "phpunit/phpunit": "^9.5"
+        "orchestra/testbench": "^6.17",
+        "pestphp/pest": "^1.0",
+        "symfony/var-dumper": "^5.2"
     },
     "autoload": {
         "psr-4": {
