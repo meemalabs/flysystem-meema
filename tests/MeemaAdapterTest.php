@@ -122,4 +122,3 @@ it('can set delete a file', function () {
     $this->assertTrue(is_array($response));
     $this->assertTrue($response['message'] === 'File successfully deleted.');
 });
-
