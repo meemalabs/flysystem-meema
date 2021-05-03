@@ -2065,16 +2065,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v5.2.6",
+            "version": "v5.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "35f039df40a3b335ebf310f244cb242b3a83ac8d"
+                "reference": "90374b8ed059325b49a29b55b3f8bb4062c87629"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/35f039df40a3b335ebf310f244cb242b3a83ac8d",
-                "reference": "35f039df40a3b335ebf310f244cb242b3a83ac8d",
+                "url": "https://api.github.com/repos/symfony/console/zipball/90374b8ed059325b49a29b55b3f8bb4062c87629",
+                "reference": "90374b8ed059325b49a29b55b3f8bb4062c87629",
                 "shasum": ""
             },
             "require": {
@@ -2142,7 +2142,7 @@
                 "terminal"
             ],
             "support": {
-                "source": "https://github.com/symfony/console/tree/v5.2.6"
+                "source": "https://github.com/symfony/console/tree/v5.2.7"
             },
             "funding": [
                 {
@@ -2158,7 +2158,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-03-28T09:42:18+00:00"
+            "time": "2021-04-19T14:07:32+00:00"
         },
         {
             "name": "symfony/css-selector",
@@ -5238,16 +5238,16 @@
         },
         {
             "name": "pestphp/pest",
-            "version": "v1.0.5",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pestphp/pest.git",
-                "reference": "6616b6299bd9f01f9d5390c03c82df3ba30413fb"
+                "reference": "c6a2e3b4d0eb129ad8eab2d6c8603a5e6c68f12b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pestphp/pest/zipball/6616b6299bd9f01f9d5390c03c82df3ba30413fb",
-                "reference": "6616b6299bd9f01f9d5390c03c82df3ba30413fb",
+                "url": "https://api.github.com/repos/pestphp/pest/zipball/c6a2e3b4d0eb129ad8eab2d6c8603a5e6c68f12b",
+                "reference": "c6a2e3b4d0eb129ad8eab2d6c8603a5e6c68f12b",
                 "shasum": ""
             },
             "require": {
@@ -5315,7 +5315,7 @@
             ],
             "support": {
                 "issues": "https://github.com/pestphp/pest/issues",
-                "source": "https://github.com/pestphp/pest/tree/v1.0.5"
+                "source": "https://github.com/pestphp/pest/tree/v1.1.0"
             },
             "funding": [
                 {
@@ -5343,7 +5343,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2021-03-31T15:00:01+00:00"
+            "time": "2021-05-02T22:41:59+00:00"
         },
         {
             "name": "pestphp/pest-plugin",
