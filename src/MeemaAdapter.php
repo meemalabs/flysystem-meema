@@ -43,7 +43,7 @@ class MeemaAdapter extends AbstractAdapter
      */
     public function writeStream($path, $resource, Config $config)
     {
-        $this->client->storage()->upload($path, $resource, $config);
+        return $this->client->storage()->upload($path, $resource, $config);
     }
 
     /**
@@ -57,7 +57,7 @@ class MeemaAdapter extends AbstractAdapter
      */
     public function update($path, $contents, Config $config)
     {
-        $this->client->storage()->upload($path, $contents, $config);
+        return $this->client->storage()->upload($path, $contents, $config);
     }
 
     /**
