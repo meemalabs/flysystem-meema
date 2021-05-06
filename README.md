@@ -48,9 +48,16 @@ public function boot()
     });
 }
 ```
-After extending the storage you will have to put the `meema` driver in your `config/filesystems.php`
+After extending the storage you will have to put the `meema` as you filesystem driver in your `.env`
+
+```
+FILESYSTEM_DRIVER=meema
+```
+
+After extending the storage and defining `meema` as your drive in `.env` you will have to put the `meema` driver in your `config/filesystems.php`
 
 Read more about custom filesystems [here](https://laravel.com/docs/8.x/filesystem#custom-filesystems)
+
 ```php
 'disks' => [
     ...
@@ -59,6 +66,17 @@ Read more about custom filesystems [here](https://laravel.com/docs/8.x/filesyste
         'api_seceret' => env('MEEMA_API_SECRET'),
     ],
 ]
+```
+After extending and defining the filesystem driver, you can then use the Laravel Storage facade as such:
+
+```php
+use Illuminate\Support\Facades\Storage;
+
+Storage::disk('meema')->put('photos/image.jpg', $file);
+Storage::disk('meema')->getMetadata('photos/image.jpg');
+Storage::disk('meema')->getVisibility('photos/image.jpg');
+Storage::disk('meema')->setVisibility('photos/image.jpg', 'private');
+Storage::disk('meema')->path('photos/image.jpg');
 ```
 
 ## Changelog
