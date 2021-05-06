@@ -77,6 +77,8 @@ Storage::disk('meema')->getMetadata('photos/image.jpg');
 Storage::disk('meema')->getVisibility('photos/image.jpg');
 Storage::disk('meema')->setVisibility('photos/image.jpg', 'private');
 Storage::disk('meema')->path('photos/image.jpg');
+Storage::disk('meema')->copy('photos/image.jpg', 'photos/copied-image.jpg');
+Storage::disk('meema')->rename('photos/image.jpg', 'photos/renamed-image.jpg');
 ```
 
 ## Changelog
