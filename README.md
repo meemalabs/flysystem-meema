@@ -63,7 +63,7 @@ Read more about custom filesystems [here](https://laravel.com/docs/8.x/filesyste
     ...
     'meema' => [
         'driver' => 'meema',
-        'api_seceret' => env('MEEMA_API_SECRET'),
+        'api_secret' => env('MEEMA_API_SECRET'),
     ],
 ]
 ```
