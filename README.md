@@ -94,13 +94,15 @@ After extending and defining the filesystem driver, you can then use Laravel's "
 ```php
 use Illuminate\Support\Facades\Storage;
 
-Storage::disk('meema')->put('photos/image.jpg', $file);
-Storage::disk('meema')->getMetadata('photos/image.jpg');
-Storage::disk('meema')->getVisibility('photos/image.jpg');
-Storage::disk('meema')->setVisibility('photos/image.jpg', 'private');
-Storage::disk('meema')->path('photos/image.jpg');
-Storage::disk('meema')->copy('photos/image.jpg', 'photos/copied-image.jpg');
-Storage::disk('meema')->rename('photos/image.jpg', 'photos/renamed-image.jpg');
+$storage = Storage::disk('meema');
+
+$storage->put('photos/image.jpg', $file);
+$storage->getMetadata('photos/image.jpg');
+$storage->getVisibility('photos/image.jpg');
+$storage->setVisibility('photos/image.jpg', 'private');
+$storage->path('photos/image.jpg');
+$storage->copy('photos/image.jpg', 'photos/copied-image.jpg');
+$storage->rename('photos/image.jpg', 'photos/renamed-image.jpg');
 ```
 
 ## 📈 Changelog
