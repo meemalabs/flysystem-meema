@@ -3,7 +3,7 @@
     <img alt="Meema for Laravel" src="https://raw.githubusercontent.com/meema/meemasearch-client-common/master/banners/php.png" >
   </a>
 
-<h4 align="center">The most simple way to integrate <a href="https://meema.io" target="_blank">Meema</a> and your Laravel project</h4>
+<h4 align="center">The most simple way to integrate <a href="https://meema.io" target="_blank">Meema</a> and your PHP/Laravel project</h4>
 
 <p align="center">
     <a href="https://scrutinizer-ci.com/g/meemalabs/flysystem-meema/badges/quality-score.png?b=main"><img src="https://scrutinizer-ci.com/g/meemalabs/flysystem-meema/badges/quality-score.png?b=main" alt="Scrutinizer" /></a>
@@ -21,9 +21,9 @@
     <a href="https://discord.meema.io" target="_blank">Discord</a>
 </p>
 
-## Usage
+## 🐑 Installation
 
-This package contains a [Flysystem](https://flysystem.thephpleague.com/) adapter for Meema. Under the hood, the Meema API is utilized.
+This package contains a [Flysystem](https://flysystem.thephpleague.com/) adapter for Meema.
 
 You can install the package via composer:
 
@@ -31,7 +31,9 @@ You can install the package via composer:
 composer require meema/flysystem-meema
 ```
 
-The first thing you need to do is get an API Key at Meema.io. A token can easily be generated in Meema's [Dashboard](https://meema.io/) once you are logged in.
+## 💡 Usage
+
+The first thing you need to do is get an API Key at Meema.io. An API Key can easily be generated in Meema's [Dashboard](https://meema.io/) once you are logged in. For a more detailed step-by-step instructions, explore our documentation [here](https://docs.meema.io/).
 
 ``` php
 use League\Flysystem\Filesystem;
@@ -71,7 +73,7 @@ public function boot()
 
 After extending the storage, you can set `meema` as the filesystem driver in your `.env`-file or in your filesystem's config file.
 
-```
+```bash
 FILESYSTEM_DRIVER=meema
 ```
 
