@@ -79,7 +79,7 @@ FILESYSTEM_DRIVER=meema
 
 ```php
 'disks' => [
-    ...
+    // ...
     'meema' => [
         'driver' => 'meema',
         'api_secret' => env('MEEMA_API_SECRET'),
