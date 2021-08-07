@@ -15,13 +15,12 @@
 <p align="center">
     <a href="https://docs.meema.io" target="_blank">Documentation</a>  •
     <a href="https://github.com/meemalabs/meema-client-php" target="_blank">PHP Client</a>  •
-    <a href="http://stackoverflow.com/questions/tagged/meema" target="_blank">Stack Overflow</a>  •
     <a href="https://github.com/meemalabs/laravel-meema/issues" target="_blank">Report a bug</a>  •
     <a href="https://docs.meema.io" target="_blank">FAQ</a>  •
     <a href="https://discord.meema.io" target="_blank">Discord</a>
 </p>
 
-## 🐑 Installation
+## 🐙 Installation
 
 This package contains a [Flysystem](https://flysystem.thephpleague.com/) adapter for Meema.
 
@@ -105,27 +104,42 @@ $storage->copy('photos/image.jpg', 'photos/copied-image.jpg');
 $storage->rename('photos/image.jpg', 'photos/renamed-image.jpg');
 ```
 
+## 🧪 Testing
+
+``` bash
+composer test
+```
+
 ## 📈 Changelog
 
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
+Please see our [releases](https://github.com/meemalabs/laravel-cloudfront/releases) page for more information on what has changed recently.
 
 ## 💪🏼 Contributing
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
-## ❓ Troubleshooting
+## 🏝 Community
 
-Encountering an issue? Before reaching out to support, we recommend heading to our [FAQ](https://docs.meema.io/) where you will find answers for the most commonly asked about questions/issues and gotchas with this Meema client. Feel free to join our Discord channel, we & the community can help this way as well.
+For help, discussion about best practices, or any other conversation that would benefit from being searchable:
+
+[Laravel File Preview on GitHub](https://github.com/meemalabs/laravel-cloudfront/discussions)
+
+For casual chit-chat with others using this package:
+
+[Join the Meema Discord Server](https://discord.meema.io)
 
 ## 🚨 Security
 
-If you discover any security related issues, please email [security@meema.io](security@meema.io) instead of using the issue tracker.
+Please review [our security policy](https://github.com/meemalabs/laravel-cloudfront/security/policy) on how to report security vulnerabilities.
 
 ## 🙏🏼 Credits
 
 - [Chris Breuer](https://github.com/Chris1904)
+- [Folks at Meema](https://github.com/meemalabs)
 - [All Contributors](../../contributors)
 
 ## 📄 License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+The MIT License (MIT). Please see [LICENSE](LICENSE.md) for more information.
+
+Made with ❤️ by Meema, Inc.
