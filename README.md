@@ -112,7 +112,7 @@ composer test
 
 ## 📈 Changelog
 
-Please see our [releases](https://github.com/meemalabs/laravel-cloudfront/releases) page for more information on what has changed recently.
+Please see our [releases](https://github.com/meemalabs/flysystem-meema/releases) page for more information on what has changed recently.
 
 ## 💪🏼 Contributing
 
@@ -122,7 +122,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 For help, discussion about best practices, or any other conversation that would benefit from being searchable:
 
-[Flysystem Meema on GitHub](https://github.com/meemalabs/laravel-cloudfront/discussions)
+[Flysystem Meema on GitHub](https://github.com/meemalabs/flysystem-meema/discussions)
 
 For casual chit-chat with others using this package:
 
@@ -130,7 +130,7 @@ For casual chit-chat with others using this package:
 
 ## 🚨 Security
 
-Please review [our security policy](https://github.com/meemalabs/laravel-cloudfront/security/policy) on how to report security vulnerabilities.
+Please review [our security policy](https://github.com/meemalabs/flysystem-meema/security/policy) on how to report security vulnerabilities.
 
 ## 🙏🏼 Credits
 
