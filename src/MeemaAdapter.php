@@ -21,9 +21,9 @@ class MeemaAdapter extends AbstractAdapter
     /**
      * Write a new file.
      *
-     * @param string $path
-     * @param string $contents
-     * @param Config $config   Config object
+     * @param  string  $path
+     * @param  string  $contents
+     * @param  Config  $config  Config object
      *
      * @return false|array false on failure file meta data on success
      */
@@ -35,9 +35,9 @@ class MeemaAdapter extends AbstractAdapter
     /**
      * Write a new file using a stream.
      *
-     * @param string   $path
-     * @param resource $resource
-     * @param Config   $config   Config object
+     * @param  string  $path
+     * @param  resource  $resource
+     * @param  Config  $config  Config object
      *
      * @return array|false false on failure file meta data on success
      */
@@ -49,9 +49,9 @@ class MeemaAdapter extends AbstractAdapter
     /**
      * Update a file.
      *
-     * @param string $path
-     * @param string $contents
-     * @param Config $config   Config object
+     * @param  string  $path
+     * @param  string  $contents
+     * @param  Config  $config  Config object
      *
      * @return array|false false on failure file meta data on success
      */
@@ -63,9 +63,9 @@ class MeemaAdapter extends AbstractAdapter
     /**
      * Update a file using a stream.
      *
-     * @param string   $path
-     * @param resource $resource
-     * @param Config   $config   Config object
+     * @param  string  $path
+     * @param  resource  $resource
+     * @param  Config  $config  Config object
      *
      * @return array|false false on failure file meta data on success
      */
@@ -77,8 +77,8 @@ class MeemaAdapter extends AbstractAdapter
     /**
      * Rename a file.
      *
-     * @param string $path
-     * @param string $newpath
+     * @param  string  $path
+     * @param  string  $newpath
      *
      * @return bool
      */
@@ -90,8 +90,8 @@ class MeemaAdapter extends AbstractAdapter
     /**
      * Copy a file.
      *
-     * @param string $path
-     * @param string $newpath
+     * @param  string  $path
+     * @param  string  $newpath
      *
      * @return bool
      */
@@ -103,7 +103,7 @@ class MeemaAdapter extends AbstractAdapter
     /**
      * Delete a file.
      *
-     * @param string $path
+     * @param  string  $path
      *
      * @return bool
      */
@@ -115,7 +115,7 @@ class MeemaAdapter extends AbstractAdapter
     /**
      * Delete a directory.
      *
-     * @param string $dirname
+     * @param  string  $dirname
      *
      * @return bool
      */
@@ -127,8 +127,8 @@ class MeemaAdapter extends AbstractAdapter
     /**
      * Create a directory.
      *
-     * @param string $dirname directory name
-     * @param Config $config
+     * @param  string  $dirname  directory name
+     * @param  Config  $config
      *
      * @return array|false
      */
@@ -140,8 +140,8 @@ class MeemaAdapter extends AbstractAdapter
     /**
      * Set the visibility for a file.
      *
-     * @param string $path
-     * @param string $visibility
+     * @param  string  $path
+     * @param  string  $visibility
      *
      * @return array|false file meta data
      */
@@ -153,7 +153,7 @@ class MeemaAdapter extends AbstractAdapter
     /**
      * Check whether a file exists.
      *
-     * @param string $path
+     * @param  string  $path
      *
      * @return bool
      */
@@ -165,7 +165,7 @@ class MeemaAdapter extends AbstractAdapter
     /**
      * Read a file.
      *
-     * @param string $path
+     * @param  string  $path
      *
      * @return false|array
      */
@@ -177,8 +177,8 @@ class MeemaAdapter extends AbstractAdapter
     /**
      * List contents of a directory.
      *
-     * @param string $directory
-     * @param bool   $recursive
+     * @param  string  $directory
+     * @param  bool  $recursive
      *
      * @return array
      */
@@ -190,7 +190,7 @@ class MeemaAdapter extends AbstractAdapter
     /**
      * Read a file as a stream.
      *
-     * @param string $path
+     * @param  string  $path
      *
      * @return array|false
      */
@@ -202,7 +202,7 @@ class MeemaAdapter extends AbstractAdapter
     /**
      * Get all the meta data of a file or directory.
      *
-     * @param string $path
+     * @param  string  $path
      *
      * @return false|array
      */
@@ -214,7 +214,7 @@ class MeemaAdapter extends AbstractAdapter
     /**
      * Get all the meta data of a file or directory.
      *
-     * @param string $path
+     * @param  string  $path
      *
      * @return false|array
      */
@@ -226,7 +226,7 @@ class MeemaAdapter extends AbstractAdapter
     /**
      * Get the mimetype of a file.
      *
-     * @param string $path
+     * @param  string  $path
      *
      * @return false|array
      */
@@ -238,7 +238,7 @@ class MeemaAdapter extends AbstractAdapter
     /**
      * Get the timestamp of a file.
      *
-     * @param string $path
+     * @param  string  $path
      *
      * @return false|array
      */
@@ -250,7 +250,7 @@ class MeemaAdapter extends AbstractAdapter
     /**
      * Get the visibility of a file.
      *
-     * @param string $path
+     * @param  string  $path
      *
      * @return array|false
      */
